@@ -27,5 +27,5 @@ def get_ip_from_interface_name(interface_name):
 def execute_state(ctx, **kwargs):
     state_name = kwargs["node_id"]["state_name"]
     ctx.logger.info("executing state " + state_name + " on node " + kwargs["node_id"])
-    command = "salt-call state.sls"
+    command = "salt-call"
     exitcode = subprocess.call([command, state_name])
